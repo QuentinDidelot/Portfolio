@@ -33,3 +33,19 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const headerNav = document.querySelector(".main-nav");
+    const headerHeight = document.querySelector("header").offsetHeight;
+    
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > headerHeight) {
+            headerNav.classList.add("fixed-nav");
+        } else {
+            headerNav.classList.remove("fixed-nav");
+        }
+    });
+});
+

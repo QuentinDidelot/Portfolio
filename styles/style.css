@@ -13,7 +13,6 @@
 }
 
 
-
 /**
 * Valeur par défaut de toutes les balises
 */
@@ -62,6 +61,9 @@ h1, h2, h3 {
     color: var(--mainBlueColor); 
 }
 
+h4 {
+    color: lightskyblue;
+}
 p {
     color : var(--textColorOne); 
     line-height: 1.6;
@@ -153,14 +155,29 @@ a {
     color : var(--textColorOne);
 }
 
+/**
+* Navigation
+*/
+
+
+.header-nav {
+    position: absolute; /* Position dans l'en-tête */
+    top: 15px; /* Ajustez la position comme nécessaire */
+    right: 15px; /* Ajustez la position comme nécessaire */
+}
+
 .main-nav {
-    margin-top: 20px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    margin-top: 15px;
 }
 
 .main-nav ul {
     list-style: none;
     padding: 0;
     display: flex;
+    justify-content: flex-end;
 }
 
 .main-nav ul li {
@@ -175,8 +192,26 @@ a {
 }
 
 .main-nav ul li a:hover {
-    color: #33bbff; /* Légère variation plus claire du bleu électrique */
+    color: #33bbff;
 }
+
+/**
+* Navigation fixe après défilement
+*/
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: white; 
+    box-shadow:  2px 5px rgba(47, 135, 252, 0.5);
+    z-index: 1000; 
+    display: flex;
+    justify-content: center; 
+    padding: 10px 0; 
+}
+
+
 
 /**
 * Section À propos 
@@ -312,7 +347,7 @@ a {
 
 .skill-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.7);
 }
 
 .skill-card h3 {
