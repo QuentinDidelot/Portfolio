@@ -29,6 +29,19 @@ body {
     background-color: var(--backgroundColorOne); 
 }
 
+body::-webkit-scrollbar {
+    width: 10px; /* Largeur de la barre de défilement */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #3498db; /* Couleur de la poignée */
+    border-radius: 5px; /* Arrondir les coins de la poignée */
+}
+
+body::-webkit-scrollbar-track {
+    background: #070707; /* Couleur de la piste de la barre de défilement */
+}
+
 header {
     background-color: var(--backgroundColorTwo);
     padding: 20px 0;
@@ -72,6 +85,73 @@ p {
 a {
     text-decoration: none;
     color: var(--mainBlueColor); 
+}
+
+
+/**
+* Navigation
+*/
+
+
+.header-nav {
+    position: absolute; 
+    top: 15px; 
+    right: 15px; 
+}
+
+.main-nav {
+    display: flex;
+    position: absolute;
+    top: 0;
+    margin-top: 15px;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    color: var(--mainBlueColor);
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #51bcf1;
+}
+
+/**
+* Navigation fixe après défilement
+*/
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    margin : 0px;
+    width: 100%;
+    background: linear-gradient(#000, 85%, #00aaffcd);
+    box-shadow: 1em 1em 10em .1em #00aaffcd;
+    transition: all .3s ease-in-out;
+}
+
+
+/* Couleur du texte et ajustements */
+.fixed-nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Ajout d'une légère lueur autour du texte */
 }
 
 /**
@@ -155,63 +235,6 @@ a {
     color : var(--textColorOne);
 }
 
-/**
-* Navigation
-*/
-
-
-.header-nav {
-    position: absolute; /* Position dans l'en-tête */
-    top: 15px; /* Ajustez la position comme nécessaire */
-    right: 15px; /* Ajustez la position comme nécessaire */
-}
-
-.main-nav {
-    display: flex;
-    position: absolute;
-    top: 0;
-    margin-top: 15px;
-}
-
-.main-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.main-nav ul li {
-    margin: 0 15px;
-}
-
-.main-nav ul li a {
-    color: var(--mainBlueColor);
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-}
-
-.main-nav ul li a:hover {
-    color: #33bbff;
-}
-
-/**
-* Navigation fixe après défilement
-*/
-.fixed-nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    background: white; 
-    box-shadow:  2px 5px rgba(47, 135, 252, 0.5);
-    z-index: 1000; 
-    display: flex;
-    justify-content: center; 
-    padding: 10px 0; 
-}
-
-
 
 /**
 * Section À propos 
@@ -268,6 +291,7 @@ a {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    border: 5px solid #5ba8fa;
 }
 
 .timeline-date {
@@ -319,6 +343,7 @@ a {
 #skills_section {
     padding: 50px;
     background-color: var(--backgroundColorTwo);
+    box-shadow: 3px 3px white;
     max-width: 1200px;
     margin: auto;
     text-align: center;
