@@ -35,13 +35,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// Navigation qui apparait puis qui reste en haut de l'écran
+// Fonction qui fixe la barre de navigation dès que le header est dépassé
 document.addEventListener("DOMContentLoaded", function() {
     const headerNav = document.querySelector(".main-nav");
     const headerHeight = document.querySelector("header").offsetHeight;
-    
+    const offset = 200; 
+
     window.addEventListener("scroll", function() {
-        if (window.scrollY > headerHeight) {
+        if (window.scrollY > (headerHeight - offset)) {
             headerNav.classList.add("fixed-nav");
         } else {
             headerNav.classList.remove("fixed-nav");
@@ -49,6 +50,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
+// Fonction qui colorise les sections dans la barre de navigation dès qu'on entre dans ladite section
 document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll('section'); 
     const navLinks = document.querySelectorAll('.fixed-nav ul li a');
@@ -68,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }, {
-        threshold: 0.65  // Triggers when 60% of the section is visible
+        threshold: 0.65 
     });
 
     sections.forEach(section => {
