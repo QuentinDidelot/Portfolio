@@ -1,4 +1,4 @@
-/**
+/* /**
 * Déclaration des couleurs
 */
 
@@ -133,16 +133,49 @@ a {
     color: #51bcf1;
 }
 
+
+
+.second-nav {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background: linear-gradient(#000, 85%, #00aaffcd);
+    box-shadow: 1em 1em 10em .1em #00aaffcd;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.second-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.second-nav ul li {
+    margin: 0 15px;
+}
+
+.second-nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
 /**
 * Navigation fixe après défilement
 */
+
 .fixed-nav {
     position: fixed;
     top: 0;
     right: 0;
     z-index: 1000;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 20px 0;
     margin : 0px;
     width: 100%;
@@ -151,13 +184,13 @@ a {
     transition: all .3s ease-in-out;
 }
 
-
-/* Couleur du texte et ajustements */
 .fixed-nav ul li a {
     color: white;
     font-weight: bold;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Ajout d'une légère lueur autour du texte */
 }
+
+
 
 /**
 * Section Header
@@ -707,7 +740,6 @@ footer a {
 
 @media screen and (max-width: 768px) {
     nav ul li {
-        display: block;
         margin: 10px 0;
     }
 
@@ -737,8 +769,6 @@ footer a {
     }
 }
 
-
-
 @media (max-width: 900px) {
     .project-item {
         flex: 0 0 100%; /* Affiche 1 projet à la fois */
@@ -748,5 +778,29 @@ footer a {
 @media (min-width: 899px) {
     .project-item {
         flex: 0 0 33.3333%; /* Affiche 3 projets à la fois */
+    }
+}
+
+
+
+/* Masquer la navigation normale et afficher la navigation fixe sur petits écrans */
+@media (max-width: 1174px) {
+    .main-nav {
+        display: none; /* Masquer la navigation normale sur petits écrans */
+    }
+    
+    .second-nav {
+        display: flex; /* Afficher la navigation fixe */
+    }
+}
+
+/* Afficher la navigation normale et masquer la navigation fixe sur grands écrans */
+@media (min-width: 1175px) {
+    .main-nav {
+        display: flex; /* Afficher la navigation normale */
+    }
+    
+    .second-nav {
+        display: none; /* Masquer la navigation fixe */
     }
 }
