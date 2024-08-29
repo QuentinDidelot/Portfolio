@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
+// Navigation qui apparait puis qui reste en haut de l'écran
 document.addEventListener("DOMContentLoaded", function() {
     const headerNav = document.querySelector(".main-nav");
     const headerHeight = document.querySelector("header").offsetHeight;

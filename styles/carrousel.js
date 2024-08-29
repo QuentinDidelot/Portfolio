@@ -1,9 +1,19 @@
-// carousel.js
-
 document.addEventListener('DOMContentLoaded', () => {
-    const itemsPerPage = 3;
-    const totalPages = Math.ceil(projects.length / itemsPerPage);
+    let itemsPerPage;
+    let totalPages;
     let currentPage = 0;
+
+    const container = document.querySelector('.carousel-container');
+    const projectList = document.getElementById('projectList');
+    
+    function updateItemsPerPage() {
+        if (window.innerWidth >= 900) {
+            itemsPerPage = 3; // Sur les écrans plus grands, afficher 3 projets par page
+        } else {
+            itemsPerPage = 1; // Sur les écrans plus petits, afficher 1 projet par page
+        }
+        totalPages = Math.ceil(projects.length / itemsPerPage);
+    }
 
     function renderIndicators() {
         const carouselIndicators = document.getElementById('carouselIndicators');
@@ -28,12 +38,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateCarousel() {
-        const container = document.querySelector('.carousel-container');
         container.style.transform = `translateX(${-currentPage * 100}%)`;
         renderIndicators();
     }
 
-    // Initialisation du carrousel
-    updateCarousel();
+    function initCarousel() {
+        updateItemsPerPage();
+        currentPage = 0;
+        updateCarousel();
+    }
 
+    // Initialisation du carrousel
+    initCarousel();
+
+    // Mettre à jour le carrousel lors du redimensionnement de la fenêtre
+    window.addEventListener('resize', () => {
+        initCarousel();
+    });
 });

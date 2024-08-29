@@ -74,6 +74,11 @@ h1, h2, h3 {
     color: var(--mainBlueColor); 
 }
 
+h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
 h4 {
     color: lightskyblue;
 }
@@ -158,6 +163,15 @@ a {
 * Section Header
 */
 
+.welcome {
+    font-size: 1.5em; /* Taille de la police, ajustez selon vos préférences */
+    margin-bottom: 5vh; /* Espacement en dessous du texte "Bienvenue !" */
+    text-align: center; /* Centrer le texte */
+    width: 100%; /* Assurer que le texte prenne toute la largeur disponible */
+    align-self: center; /* Centrer horizontalement dans le conteneur flex */
+    z-index: 3; /* Assurez-vous que le texte est au-dessus des autres éléments */
+}
+
 .banner {
     position: relative;
     height: 100vh;
@@ -189,29 +203,60 @@ a {
     object-fit: cover;
 }
 
+
+
 .banner-right {
     flex: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start; 
+    align-items: center; 
     padding: 20px;
 }
 
 .banner-photo {
     width: 250px;
     height: 250px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 20px;
+    margin-top: 20px; 
+    margin-bottom: 50px;
     align-self: center;
+    position: relative;
+    top: 20px; 
 }
 
 .banner-photo img {
     width: 100%;
     height: 100%;
+    border-radius: 50%;
     object-fit: cover;
+    z-index: 2; 
 }
+
+.circle-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 280px;
+    height: 280px; 
+    border: 3px groove rgba(0, 181, 204, 0.9); 
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: 0 0 15px #00aaffcc, 0 0 30px #00aaffcc; 
+    animation: rotateCircle 3s linear infinite; 
+}
+
+/* Animation de rotation */
+@keyframes rotateCircle {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
 
 .banner-text {
     text-align: left;
@@ -349,11 +394,6 @@ a {
     text-align: center;
 }
 
-#skills_section h2 {
-    font-size: 2.5em;
-    color: var(--mainBlueColor);
-    margin-bottom: 30px;
-}
 
 .skills-grid {
     display: grid;
@@ -561,7 +601,7 @@ a {
 */
 
 #contact_section {
-    background-color: rgba(0, 170, 255, 0.1); /* Bleu électrique avec transparence */
+    background-color: rgba(0, 170, 255, 0.1); 
     padding: 40px;
     border-radius: 10px;
     max-width: 600px;
@@ -641,7 +681,7 @@ form input[type="submit"]:hover {
 }
 
 #scrollTopBtn:hover {
-    background-color: #003d82; /* Couleur plus foncée au survol */
+    background-color: #003d82; 
 }
 
 
@@ -665,7 +705,7 @@ footer a {
 * Responsive 
 */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     nav ul li {
         display: block;
         margin: 10px 0;
@@ -674,17 +714,39 @@ footer a {
     form {
         width: 100%;
     }
-}
 
+    .banner-photo{
+        width: 150px;
+        height: 150px;
+    }
 
-@media (min-width: 768px) {
-    .project-item {
-        flex: 0 0 33.3333%; /* Affiche 3 projets à la fois */
+    .fixed-nav {
+        position: fixed;
+    }
+
+    .circle-animation {
+        width: 180px;
+        height: 180px;
+    }
+
+    .timeline-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
-@media (max-width: 767px) {
+
+
+@media (max-width: 900px) {
     .project-item {
         flex: 0 0 100%; /* Affiche 1 projet à la fois */
+    }
+}
+
+@media (min-width: 899px) {
+    .project-item {
+        flex: 0 0 33.3333%; /* Affiche 3 projets à la fois */
     }
 }
