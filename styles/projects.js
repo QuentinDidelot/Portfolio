@@ -3,31 +3,31 @@
 const projects = [
     {
         title: "Booki",
-        link: "projet1.html",
+        link: "projets.html",
         image: "img/projets/projet_1.png",
         skills: ["HTML", "CSS", "Intégration"]
     },
     {
         title: "The ArtBox",
-        link: "projet2.html",
+        link: "projets.html",
         image: "img/projets/projet_2.png",
         skills: ["HTML", "CSS", "PHP", "SQL"]
     },
     {
         title: "Blog d'Emilie Forteroche",
-        link: "projet3.html",
+        link: "projets.html",
         image: "img/projets/projet_3.png",
         skills: ["HTML", "CSS", "PHP", "SQL"]
     },
     {
         title: "Tom Troc",
-        link: "projet4.html",
+        link: "projets.html",
         image: "img/projets/projet_4.png",
         skills: ["HTML", "CSS", "PHP", "Intégration", "SQL" ]
     },
     {
         title: "TaskLinker",
-        link: "projet5.html",
+        link: "projets.html",
         image: "img/projets/projet_5.png",
         skills: ["HTML", "CSS", "PHP", "Symfony", "Doctrine", "Twig"]
     },
@@ -39,13 +39,12 @@ const projects = [
     },
 
 
-    // Ajoutez d'autres projets ici
 ];
 
 
 function renderProjects() {
     const projectList = document.getElementById('projectList');
-    projectList.innerHTML = ''; // Réinitialiser la liste
+    projectList.innerHTML = ''; 
 
     projects.forEach((project, index) => {
         const projectItem = document.createElement('div');
@@ -80,7 +79,6 @@ function renderProjects() {
     });
 }
 
-// Appel initial de la fonction pour afficher les projets
 renderProjects();
 
 function toggleSkills(element) {

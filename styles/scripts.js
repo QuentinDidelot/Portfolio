@@ -48,3 +48,30 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll('section'); 
+    const navLinks = document.querySelectorAll('.fixed-nav ul li a');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const id = entry.target.getAttribute('id');
+            const navLink = document.querySelector(`.fixed-nav ul li a[href="#${id}"]`);
+
+            if (entry.isIntersecting) {
+                // Quand la section est visible
+                navLinks.forEach(link => link.classList.remove('active')); 
+                navLink.classList.add('active'); 
+            } else if (!entry.isIntersecting && navLink.classList.contains('active')) {
+                // Quand la section n'est plus visible
+                navLink.classList.remove('active');
+            }
+        });
+    }, {
+        threshold: 0.65  // Triggers when 60% of the section is visible
+    });
+
+    sections.forEach(section => {
+        observer.observe(section); 
+    });
+});

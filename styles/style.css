@@ -30,16 +30,16 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 10px; /* Largeur de la barre de défilement */
+    width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #3498db; /* Couleur de la poignée */
-    border-radius: 5px; /* Arrondir les coins de la poignée */
+    background: #3498db; 
+    border-radius: 5px; 
 }
 
 body::-webkit-scrollbar-track {
-    background: #070707; /* Couleur de la piste de la barre de défilement */
+    background: #070707; 
 }
 
 header {
@@ -165,6 +165,7 @@ a {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
 
+
 /**
 * Navigation fixe après défilement
 */
@@ -187,9 +188,13 @@ a {
 .fixed-nav ul li a {
     color: white;
     font-weight: bold;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Ajout d'une légère lueur autour du texte */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
 
+
+.fixed-nav ul li a.active {
+    color: #00aaff; 
+}
 
 
 /**
@@ -197,12 +202,12 @@ a {
 */
 
 .welcome {
-    font-size: 1.5em; /* Taille de la police, ajustez selon vos préférences */
-    margin-bottom: 5vh; /* Espacement en dessous du texte "Bienvenue !" */
-    text-align: center; /* Centrer le texte */
-    width: 100%; /* Assurer que le texte prenne toute la largeur disponible */
-    align-self: center; /* Centrer horizontalement dans le conteneur flex */
-    z-index: 3; /* Assurez-vous que le texte est au-dessus des autres éléments */
+    font-size: 1.5em; 
+    margin-bottom: 5vh; 
+    text-align: center; 
+    width: 100%; 
+    align-self: center; 
+    z-index: 3; 
 }
 
 .banner {
@@ -213,6 +218,12 @@ a {
     justify-content: center;
     color: #fff;
     text-align: center;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .banner-content {
@@ -510,6 +521,10 @@ a {
 .icon-teamwork { background-image: url('/img/icones/skills/icon-teamwork.png'); }
 .icon-support { background-image: url('/img/icones/skills/icon-support.png'); }
 .icon-writing { background-image: url('/img/icones/skills/icon-writing.png'); }
+.icon-gestion { background-image: url('/img/icones/skills/icon-gestion.png'); }
+.icon-test { background-image: url('/img/icones/skills/icon-test.png'); }
+.icon-canva { background-image: url('/img/icones/skills/icon-canva.png'); }
+.icon-figma { background-image: url('/img/icones/skills/icon-figma.png'); }
 
 .icon-skill {
     width: 35px; 
@@ -611,50 +626,48 @@ a {
     background-color: #00aaff;
 }
 
-/**
-* Bouton Télécharger CV 
-*/
-
-.btn {
-    background-color: #0056b3;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.btn:hover {
-    background-color: #003d82;
-}
 
 /**
 * Section Contact 
 */
 
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 #contact_section {
-    background-color: rgba(0, 170, 255, 0.1); 
+    background-color: rgba(0, 170, 255, 0.1);
     padding: 40px;
     border-radius: 10px;
-    max-width: 600px;
-    margin: 0 auto;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    flex: 1 1 55%;
+    margin-right: 20px;
 }
 
 form {
     display: flex;
     flex-direction: column;
+
 }
 
+form textarea {
+    min-height: 150px;
+}
 form input,
 form textarea {
     background-color: var(--backgroundColorTwo);
-    color : var(--textColorOne);
+    color: var(--textColorOne);
     padding: 10px;
     border: 1px solid #333;
     border-radius: 5px;
     margin-bottom: 10px;
+    resize: vertical;
 }
 
 form input[type="submit"] {
@@ -681,7 +694,7 @@ form input[type="submit"]:hover {
 
 .contact-info a {
     text-decoration: none;
-    color: #0056b3;
+    color: var(--mainBlueColor);
     font-weight: bold;
 }
 
@@ -690,6 +703,35 @@ form input[type="submit"]:hover {
     height: 30px;
     vertical-align: middle;
 }
+
+/* Section Téléchargement CV */
+.cv-download {
+    flex: 1 1 35%;
+    text-align: center;
+}
+
+.cv-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cv-download .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cv-download .btn:hover {
+    background-color: #33bbff;
+}
+
 
 
 /**
@@ -786,21 +828,21 @@ footer a {
 /* Masquer la navigation normale et afficher la navigation fixe sur petits écrans */
 @media (max-width: 1174px) {
     .main-nav {
-        display: none; /* Masquer la navigation normale sur petits écrans */
+        display: none; 
     }
     
     .second-nav {
-        display: flex; /* Afficher la navigation fixe */
+        display: flex; 
     }
 }
 
 /* Afficher la navigation normale et masquer la navigation fixe sur grands écrans */
 @media (min-width: 1175px) {
     .main-nav {
-        display: flex; /* Afficher la navigation normale */
+        display: flex; 
     }
     
     .second-nav {
-        display: none; /* Masquer la navigation fixe */
+        display: none;
     }
 }
