@@ -852,7 +852,7 @@ footer a {
     .banner-text {
         font-size: smaller;
     }
-    
+
     .banner-photo {
         width: 150px;
         height: 150px;
@@ -938,6 +938,17 @@ footer a {
         flex: 0 0 33.3333%; /* Affiche 3 projets à la fois */
     }
 
+    .banner-photo {
+        width: 150px;
+        height: 150px;
+        margin-top: 20px; 
+    }
+
+    .circle-animation {
+        width: 180px;
+        height: 180px;
+    }
+    
     .welcome {
         margin-top: 150px; 
     }
