@@ -515,30 +515,6 @@ a {
     margin-right: 10px;
 }
 
-.icon-html5 { background-image: url('/img/icones/skills/icon-html5.png'); }
-.icon-css3 { background-image: url('/img/icones/skills/icon-css3.png'); }
-.icon-js { background-image: url('/img/icones/skills/icon-js.png'); }
-.icon-bootstrap { background-image: url('/img/icones/skills/icon-bootstrap.png'); }
-.icon-twig { background-image: url('/img/icones/skills/icon-twig.png'); }
-.icon-php { background-image: url('/img/icones/skills/icon-php.png'); }
-.icon-symfony { background-image: url('/img/icones/skills/icon-symfony.png'); }
-.icon-api { background-image: url('/img/icones/skills/icon-api.png'); }
-.icon-doctrine { background-image: url('/img/icones/skills/icon-doctrine.png'); }
-.icon-mysql { background-image: url('/img/icones/skills/icon-mysql.png'); }
-.icon-git { background-image: url('/img/icones/skills/icon-github.png'); }
-.icon-ide-1 { background-image: url('/img/icones/skills/icon-ide-1.png'); }
-.icon-ide-2 { background-image: url('/img/icones/skills/icon-ide-2.png'); }
-.icon-wordpress { background-image: url('/img/icones/skills/icon-wordpress.png'); }
-.icon-agile { background-image: url('/img/icones/skills/icon-agile.png'); }
-.icon-communication { background-image: url('/img/icones/skills/icon-communication.png'); }
-.icon-teamwork { background-image: url('/img/icones/skills/icon-teamwork.png'); }
-.icon-support { background-image: url('/img/icones/skills/icon-support.png'); }
-.icon-writing { background-image: url('/img/icones/skills/icon-writing.png'); }
-.icon-gestion { background-image: url('/img/icones/skills/icon-gestion.png'); }
-.icon-test { background-image: url('/img/icones/skills/icon-test.png'); }
-.icon-canva { background-image: url('/img/icones/skills/icon-canva.png'); }
-.icon-figma { background-image: url('/img/icones/skills/icon-figma.png'); }
-
 .icon-skill {
     width: 35px; 
     height: 35px;
