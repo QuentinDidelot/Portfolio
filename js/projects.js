@@ -43,6 +43,7 @@ const projects = [
 // Variable pour stocker les filtres sélectionnés
 let selectedFilters = [];
 
+
 // Fonction pour filtrer les projets selon les compétences sélectionnées
 function filterProjects() {
     const filteredProjects = projects.filter(project => 
@@ -102,9 +103,6 @@ function renderFilteredProjects() {
     updateCarousel(filteredProjects); // Mettre à jour le carrousel avec les projets filtrés
 }
 
-
-
-// Écouteur d'événement pour les boutons de filtre
 // Écouteur d'événement pour les boutons de filtre
 const filterButtons = document.querySelectorAll('.filter-btn:not(.reset-btn)');
 filterButtons.forEach(button => {
@@ -129,6 +127,7 @@ document.getElementById('reset-filters').addEventListener('click', () => {
     filterButtons.forEach(button => button.classList.remove('active')); // Enlever la classe active de tous les boutons
     renderFilteredProjects(); // Re-rendre tous les projets
 });
+
 
 
 // Rendu initial des projets
