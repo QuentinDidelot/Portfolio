@@ -1,5 +1,4 @@
 
-
 const projects = [
     {
         title: "Booki",
@@ -59,6 +58,15 @@ function renderFilteredProjects() {
 
     const filteredProjects = filterProjects(); // Obtenir les projets filtrés
 
+    console.log('Filtered Projects:', filteredProjects); // Vérifiez les projets filtrés
+
+    if (filteredProjects.length === 0) {
+        projectList.innerHTML = '<p class="no_project">Aucun projet ne correspond aux filtres sélectionnés.</p>';
+        currentPage = 0;
+        updateCarousel([]); // Passer un tableau vide à updateCarousel
+        return;
+    }
+
     filteredProjects.forEach((project, index) => {
         const projectItem = document.createElement('div');
         projectItem.classList.add('project-item');
@@ -93,6 +101,7 @@ function renderFilteredProjects() {
 
     updateCarousel(filteredProjects); // Mettre à jour le carrousel avec les projets filtrés
 }
+
 
 
 // Écouteur d'événement pour les boutons de filtre
