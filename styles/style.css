@@ -33,7 +33,6 @@ body {
 html, body {
     overflow-x: hidden;
     width: 100%;
-    margin: 0;
 }
 
 body::-webkit-scrollbar {
@@ -911,7 +910,6 @@ footer a {
     .second-nav ul{
         flex-direction: column;
         gap: 5px;
-
     }
 }
 
