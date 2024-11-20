@@ -30,6 +30,12 @@ body {
     max-width: 1440px;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+}
+
 body::-webkit-scrollbar {
     width: 10px;
 }
@@ -880,6 +886,11 @@ footer a {
         text-align: center;
     }
 
+    #skills_section, .skills-grid {
+        display: flex;
+        flex-direction: column;
+
+    }
     #contact-cv-section {
         display: flex;
         flex-direction: column;
@@ -892,6 +903,15 @@ footer a {
 
     .second-nav {
         display: flex;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .second-nav ul{
+        flex-direction: column;
+        gap: 5px;
+
     }
 }
 
@@ -948,7 +968,7 @@ footer a {
         width: 180px;
         height: 180px;
     }
-    
+
     .welcome {
         margin-top: 150px; 
     }
