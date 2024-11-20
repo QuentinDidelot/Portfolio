@@ -1,6 +1,6 @@
-/* /**
-* Déclaration des couleurs
-*/
+/* =================================================================
+                        Déclaration des couleurs
+================================================================= */
 
 :root{
     --backgroundColorOne : #121212;
@@ -13,9 +13,9 @@
 }
 
 
-/**
-* Valeur par défaut de toutes les balises
-*/
+/* =================================================================
+                    Valeur par défaut de toutes les balises
+================================================================= */
 
 * {
     box-sizing: border-box;
@@ -23,16 +23,20 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
+    margin: auto;
     padding: 0;
     color : var(--textColorOne); 
     background-color: var(--backgroundColorOne); 
+    max-width: 1440px;
 }
 
 body::-webkit-scrollbar {
     width: 10px;
 }
 
+main {
+    flex: 1;
+}
 body::-webkit-scrollbar-thumb {
     background: #3498db; 
     border-radius: 5px; 
@@ -93,9 +97,9 @@ a {
 }
 
 
-/**
-* Navigation
-*/
+/****************************************************************
+                        Navigation
+**************************************************************** */
 
 
 .header-nav {
@@ -109,6 +113,7 @@ a {
     position: absolute;
     top: 0;
     margin-top: 15px;
+
 }
 
 .main-nav ul {
@@ -132,7 +137,6 @@ a {
 .main-nav ul li a:hover {
     color: #51bcf1;
 }
-
 
 
 .second-nav {
@@ -166,9 +170,9 @@ a {
 }
 
 
-/**
-* Navigation fixe après défilement
-*/
+/****************************************************************
+                    Navigation fixe après défilement
+**************************************************************** */
 
 .fixed-nav {
     position: fixed;
@@ -193,13 +197,13 @@ a {
 
 
 .fixed-nav ul li a.active {
-    color: #00aaff; 
+    color: var(--mainBlueColor); 
 }
 
 
-/**
-* Section Header
-*/
+/****************************************************************
+                            Header
+**************************************************************** */
 
 .welcome {
     font-size: 1.5em; 
@@ -208,6 +212,7 @@ a {
     width: 100%; 
     align-self: center; 
     z-index: 3; 
+    margin-top: 5vh;
 }
 
 .banner {
@@ -311,23 +316,26 @@ a {
     font-weight: bold;
     margin: 0;
     color: var(--mainBlueColor); 
+    text-align: center;
 }
 
 .site-subtitle {
     font-size: 1.5em;
     margin: 10px 0;
+    text-align: center;
 }
 
 .site-description {
     font-size: 1em;
     margin-bottom: 20px;
     color : var(--textColorOne);
+    text-align: center;
 }
 
 
-/**
-* Section À propos 
-*/
+/****************************************************************
+                        "À propos"
+**************************************************************** */
 
 .about {
     padding: 60px 20px;
@@ -348,9 +356,9 @@ a {
     color : var(--textColorOne);
 }
 
-/**
-* Section Formations
-*/
+/****************************************************************
+                        "Formations"
+**************************************************************** */
 
 
 .timeline {
@@ -425,9 +433,9 @@ a {
     background: #f4f4f4;
 }
 
-/**
-* Section Compétences 
-*/
+/****************************************************************
+                        "Compétences"
+**************************************************************** */
 
 #skills_section {
     padding: 50px;
@@ -531,11 +539,52 @@ a {
     height: 35px;
 }
 
+/****************************************************************
+                        "Projets filtres"
+**************************************************************** */
 
+#filter_section {
+    margin-bottom: 20px;
+}
 
-/**
-* Section Projets 
-*/
+.filter-btn {
+    background: var(--mainBlueColor);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: left;
+    font-style: normal;
+    height: 24px;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 10px;
+}
+
+.filter-btn.active {
+    background-color: #004080; /* Bleu foncé */
+    color: #ffffff;
+}
+
+.filter-btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.reset-btn {
+    background: #ff5500;
+    color: white;
+}
+
+.reset-btn:hover {
+    background-color: orange;
+}
+
+/****************************************************************
+                        "Projets"
+**************************************************************** */
 
 #projects_section {
     margin-top: 50px;
@@ -593,7 +642,7 @@ a {
 }
 
 .skill-item {
-    background: #00aaff;
+    background: var(--mainBlueColor);
     border-radius: 30px;
     color: #fff;
     font-size: 12px;
@@ -623,15 +672,17 @@ a {
 }
 
 .carousel-indicator.active {
-    background-color: #00aaff;
+    background-color: var(--mainBlueColor);
 }
 
 
-/**
-* Section Contact 
-*/
 
-.flex-container {
+
+/****************************************************************
+                        "Contact"
+**************************************************************** */
+
+#contact-cv-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -671,7 +722,7 @@ form textarea {
 }
 
 form input[type="submit"] {
-    background-color: #00aaff;
+    background-color: var(--mainBlueColor);
     color: #fff;
     border: none;
     cursor: pointer;
@@ -704,7 +755,10 @@ form input[type="submit"]:hover {
     vertical-align: middle;
 }
 
-/* Section Téléchargement CV */
+/****************************************************************
+                        "Téléchagement CV"
+**************************************************************** */
+
 .cv-download {
     flex: 1 1 35%;
     text-align: center;
@@ -721,7 +775,7 @@ form input[type="submit"]:hover {
 .cv-download .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #00aaff;
+    background-color: var(--mainBlueColor);
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -734,15 +788,15 @@ form input[type="submit"]:hover {
 
 
 
-/**
-* Bouton Retour en Haut 
-*/
+/****************************************************************
+                "Bouton de retour en haut de page"
+**************************************************************** */
 
 #scrollTopBtn {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #00aaff;
+    background-color: var(--mainBlueColor);
     color: #fff;
     border: none;
     padding: 10px;
@@ -760,9 +814,9 @@ form input[type="submit"]:hover {
 }
 
 
-/**
-* Footer 
-*/
+/****************************************************************
+                        "Footer"
+**************************************************************** */
 
 footer {
     background-color: var(--backgroundColorTwo);
@@ -776,9 +830,9 @@ footer a {
   margin: 0 5px 0 5px;
 }
 
-/**
-* Responsive 
-*/
+/****************************************************************
+                        Media queries
+**************************************************************** */
 
 @media screen and (max-width: 768px) {
     nav ul li {
@@ -789,7 +843,7 @@ footer a {
         width: 100%;
     }
 
-    .banner-photo{
+    .banner-photo {
         width: 150px;
         height: 150px;
     }
@@ -809,6 +863,20 @@ footer a {
         justify-content: center;
         align-items: center;
     }
+
+    .welcome {
+        margin-top: 100px; 
+        text-align: center;
+    }
+
+    .banner-photo {
+        margin-top: 20px; 
+    }
+
+    #contact-cv-section {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 900px) {
@@ -823,26 +891,33 @@ footer a {
     }
 }
 
-
-
 /* Masquer la navigation normale et afficher la navigation fixe sur petits écrans */
 @media (max-width: 1174px) {
     .main-nav {
-        display: none; 
+        display: none;
     }
-    
+
     .second-nav {
-        display: flex; 
+        display: flex;
+    }
+
+    .welcome {
+        margin-top: 150px; 
     }
 }
 
 /* Afficher la navigation normale et masquer la navigation fixe sur grands écrans */
 @media (min-width: 1175px) {
     .main-nav {
-        display: flex; 
+        display: flex;
     }
-    
+
     .second-nav {
         display: none;
     }
+
+    .welcome {
+        margin-top: 0; 
+    }
+
 }

@@ -5,19 +5,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const container = document.querySelector('.carousel-container');
     const projectList = document.getElementById('projectList');
-    
-    function updateItemsPerPage() {
+
+    // Fonction pour mettre à jour le nombre d'éléments par page
+    function updateItemsPerPage(filteredProjects) {
         if (window.innerWidth >= 900) {
-            itemsPerPage = 3; // Sur les écrans plus grands, afficher 3 projets par page
+            itemsPerPage = 3; // Sur les grands écrans, afficher 3 projets par page
         } else {
-            itemsPerPage = 1; // Sur les écrans plus petits, afficher 1 projet par page
+            itemsPerPage = 1; // Sur les petits écrans, 1 projet par page
         }
-        totalPages = Math.ceil(projects.length / itemsPerPage);
+        totalPages = Math.ceil(filteredProjects.length / itemsPerPage); // Calculer le nombre de pages en fonction des projets filtrés
     }
 
-    function renderIndicators() {
+    // Fonction pour afficher les indicateurs
+    function renderIndicators(filteredProjects) {
         const carouselIndicators = document.getElementById('carouselIndicators');
-        carouselIndicators.innerHTML = ''; // Réinitialiser les points
+        carouselIndicators.innerHTML = ''; // Réinitialiser les indicateurs
+
+        updateItemsPerPage(filteredProjects); // Calculer le nombre d'indicateurs
+
+        console.log('Total Pages:', totalPages); // Vérification du nombre de pages
+
+        // Si totalPages est 0, il n'y a pas de projets à afficher
+        if (totalPages === 0) return;
 
         for (let i = 0; i < totalPages; i++) {
             const indicator = document.createElement('span');
@@ -28,24 +37,35 @@ document.addEventListener('DOMContentLoaded', () => {
                 indicator.classList.add('active');
             }
 
+            // Ajout de l'événement pour naviguer entre les pages du carrousel
             indicator.addEventListener('click', () => {
+                console.log(`Indicator ${i} clicked`); // Vérification si le clic est bien détecté
                 currentPage = i;
-                updateCarousel();
+                updateCarousel(filteredProjects);
             });
 
             carouselIndicators.appendChild(indicator);
         }
     }
 
-    function updateCarousel() {
-        container.style.transform = `translateX(${-currentPage * 100}%)`;
-        renderIndicators();
+    // Fonction pour mettre à jour le carrousel avec les projets filtrés ou non filtrés
+    function updateCarousel(filteredProjects = projects) {
+        updateItemsPerPage(filteredProjects);
+
+        // Largeur d'un seul "slide" de projet
+        const slideWidth = projectList.offsetWidth;
+
+        // Ajustement du container en fonction de la page actuelle
+        container.style.transform = `translateX(${-currentPage * slideWidth}px)`; // Translate basé sur la largeur des slides
+
+        console.log(`Carousel updated, currentPage: ${currentPage}, slideWidth: ${slideWidth}px, totalPages: ${totalPages}`); // Log du déplacement
+        renderIndicators(filteredProjects);
     }
 
+    // Initialisation du carrousel au chargement de la page
     function initCarousel() {
-        updateItemsPerPage();
-        currentPage = 0;
-        updateCarousel();
+        const allProjects = projects; // Tous les projets par défaut
+        updateCarousel(allProjects); // Passer tous les projets lors de l'initialisation
     }
 
     // Initialisation du carrousel
@@ -53,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mettre à jour le carrousel lors du redimensionnement de la fenêtre
     window.addEventListener('resize', () => {
-        initCarousel();
+        const filteredProjects = filterProjects(); // Garder les filtres appliqués lors du redimensionnement
+        updateCarousel(filteredProjects);
     });
 });

@@ -41,12 +41,25 @@ const projects = [
 
 ];
 
+// Variable pour stocker les filtres sélectionnés
+let selectedFilters = [];
 
-function renderProjects() {
+// Fonction pour filtrer les projets selon les compétences sélectionnées
+function filterProjects() {
+    const filteredProjects = projects.filter(project => 
+        selectedFilters.every(filter => project.skills.includes(filter))
+    );
+    return filteredProjects;
+}
+
+// Fonction pour rendre les projets filtrés
+function renderFilteredProjects() {
     const projectList = document.getElementById('projectList');
     projectList.innerHTML = ''; 
 
-    projects.forEach((project, index) => {
+    const filteredProjects = filterProjects(); // Obtenir les projets filtrés
+
+    filteredProjects.forEach((project, index) => {
         const projectItem = document.createElement('div');
         projectItem.classList.add('project-item');
 
@@ -77,15 +90,37 @@ function renderProjects() {
         projectItem.appendChild(skillsContainer);
         projectList.appendChild(projectItem);
     });
+
+    updateCarousel(filteredProjects); // Mettre à jour le carrousel avec les projets filtrés
 }
 
-renderProjects();
 
-function toggleSkills(element) {
-    const skillList = element.nextElementSibling;
-    if (skillList.style.display === "block") {
-        skillList.style.display = "none";
-    } else {
-        skillList.style.display = "block";
-    }
-}
+// Écouteur d'événement pour les boutons de filtre
+// Écouteur d'événement pour les boutons de filtre
+const filterButtons = document.querySelectorAll('.filter-btn:not(.reset-btn)');
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+
+        if (selectedFilters.includes(filter)) {
+            selectedFilters = selectedFilters.filter(f => f !== filter); // Retirer le filtre s'il est déjà sélectionné
+            button.classList.remove('active'); // Retirer la classe active
+        } else {
+            selectedFilters.push(filter); // Ajouter le filtre
+            button.classList.add('active'); // Ajouter la classe active
+        }
+
+        renderFilteredProjects(); // Rafraîchir les projets filtrés
+    });
+});
+
+// Réinitialisation des filtres
+document.getElementById('reset-filters').addEventListener('click', () => {
+    selectedFilters = []; // Réinitialiser les filtres
+    filterButtons.forEach(button => button.classList.remove('active')); // Enlever la classe active de tous les boutons
+    renderFilteredProjects(); // Re-rendre tous les projets
+});
+
+
+// Rendu initial des projets
+renderFilteredProjects();
