@@ -3,37 +3,37 @@ const projects = [
     {
         title: "Booki",
         link: "projets.html",
-        image: "img/projets/projet_1.png",
+        image: "./img/projets/projet_1.png",
         skills: ["HTML", "CSS", "Intégration"]
     },
     {
         title: "The ArtBox",
         link: "projets.html",
-        image: "img/projets/projet_2.png",
+        image: "./img/projets/projet_2.png",
         skills: ["HTML", "CSS", "PHP", "SQL"]
     },
     {
         title: "Blog d'Emilie Forteroche",
         link: "projets.html",
-        image: "img/projets/projet_3.png",
+        image: "./img/projets/projet_3.png",
         skills: ["HTML", "CSS", "PHP", "SQL"]
     },
     {
         title: "Tom Troc",
         link: "projets.html",
-        image: "img/projets/projet_4.png",
+        image: "./img/projets/projet_4.png",
         skills: ["HTML", "CSS", "PHP", "Intégration", "SQL" ]
     },
     {
         title: "TaskLinker",
         link: "projets.html",
-        image: "img/projets/projet_5.png",
+        image: "./img/projets/projet_5.png",
         skills: ["HTML", "CSS", "PHP", "Symfony", "Doctrine", "Twig"]
     },
     {
         title: "Projet à venir",
         link: "",
-        image: "img/projets/projet_à_venir.jpg",
+        image: "./img/projets/projet_à_venir.jpg",
         skills: []
     },
 
