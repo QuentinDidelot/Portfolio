@@ -838,6 +838,8 @@ footer a {
                         Media queries
 **************************************************************** */
 
+
+/* Mobile - jusqu'à 768px */
 @media screen and (max-width: 768px) {
     nav ul li {
         margin: 10px 0;
@@ -847,9 +849,14 @@ footer a {
         width: 100%;
     }
 
+    .banner-text {
+        font-size: smaller;
+    }
+    
     .banner-photo {
         width: 150px;
         height: 150px;
+        margin-top: 20px; 
     }
 
     .fixed-nav {
@@ -869,34 +876,16 @@ footer a {
     }
 
     .welcome {
-        margin-top: 100px; 
+        margin-top: 100px;
         text-align: center;
-    }
-
-    .banner-photo {
-        margin-top: 20px; 
     }
 
     #contact-cv-section {
         display: flex;
         flex-direction: column;
     }
-}
 
-@media (max-width: 900px) {
-    .project-item {
-        flex: 0 0 100%; /* Affiche 1 projet à la fois */
-    }
-}
-
-@media (min-width: 899px) {
-    .project-item {
-        flex: 0 0 33.3333%; /* Affiche 3 projets à la fois */
-    }
-}
-
-/* Masquer la navigation normale et afficher la navigation fixe sur petits écrans */
-@media (max-width: 1174px) {
+    /* Masquer la navigation normale et afficher la navigation fixe sur petits écrans */
     .main-nav {
         display: none;
     }
@@ -904,13 +893,31 @@ footer a {
     .second-nav {
         display: flex;
     }
+}
 
-    .welcome {
-        margin-top: 150px; 
+/* Tablettes - jusqu'à 900px */
+@media (max-width: 900px) {
+    .project-item {
+        flex: 0 0 100%; /* Affiche 1 projet à la fois */
+    }
+
+    .banner-text {
+        font-size: smaller;
+    }
+
+    .banner-photo {
+        width: 150px;
+        height: 150px;
+        margin-top: 20px; 
+    }
+
+    .circle-animation {
+        width: 180px;
+        height: 180px;
     }
 }
 
-/* Afficher la navigation normale et masquer la navigation fixe sur grands écrans */
+/* Grands écrans - à partir de 1175px */
 @media (min-width: 1175px) {
     .main-nav {
         display: flex;
@@ -923,5 +930,15 @@ footer a {
     .welcome {
         margin-top: 0; 
     }
+}
 
+/* Écrans moyens - à partir de 899px et moins de 1175px */
+@media (min-width: 899px) and (max-width: 1174px) {
+    .project-item {
+        flex: 0 0 33.3333%; /* Affiche 3 projets à la fois */
+    }
+
+    .welcome {
+        margin-top: 150px; 
+    }
 }
