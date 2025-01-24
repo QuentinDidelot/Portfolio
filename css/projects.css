@@ -1,0 +1,70 @@
+/* =================================================================
+                        Déclaration des couleurs
+================================================================= */
+
+:root{
+    --backgroundColorOne : #121212;
+    --backgroundColorTwo : #1a1a1a;
+
+    --textColorOne : #e0e0e0;
+
+    --mainBlueColor: #00aaff ;
+
+}
+
+
+/****************************************************************
+                            Header
+**************************************************************** */
+
+.projects_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    border: 3px solid #007bff;
+    border-right: 0;
+    border-left: 0;
+    margin-top: 3em;
+    background-color: var(--backgroundColorTwo);
+}
+
+
+/****************************************************************
+                            Projects
+**************************************************************** */
+
+.projects_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+
+.projects_features {
+    background-color: #1a1a1a;
+    padding: 25px;
+}
+
+.projects_pictures {
+    background-color: #1a1a1a;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour les petites images */
+    grid-gap: 15px; /* Espacement entre les images */
+}
+
+.project_picture_main {
+    grid-column: span 2; /* La grande image occupe 2 colonnes */
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project_picture_second {
+    width: 100%; /* Les petites images prennent toute la largeur disponible */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
