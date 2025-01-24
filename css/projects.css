@@ -42,19 +42,25 @@
 
 .projects_features {
     background-color: #1a1a1a;
+    border-radius: 15px;
     padding: 25px;
+    max-width: 700px;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.7);
 }
 
 .projects_pictures {
     background-color: #1a1a1a;
+    border-radius: 15px;
     padding: 25px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour les petites images */
-    grid-gap: 15px; /* Espacement entre les images */
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 15px; 
+    max-width: 700px;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.7);
 }
 
 .project_picture_main {
-    grid-column: span 2; /* La grande image occupe 2 colonnes */
+    grid-column: span 2; 
     width: 100%;
     height: 400px;
     object-fit: cover;
@@ -62,9 +68,38 @@
 }
 
 .project_picture_second {
-    width: 100%; /* Les petites images prennent toute la largeur disponible */
+    width: 100%; 
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+/****************************************************************
+                            Github
+**************************************************************** */
+
+.project_github {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    gap: 10px; /* Ajoute un espace entre les éléments */
+}
+
+a {
+    display: inline-block; /* Le lien prend uniquement la taille de son contenu */
+    text-decoration: none; /* Supprime tout soulignement ou effet par défaut */
+    color: inherit; /* Garde la couleur du texte */
+}
+
+.github_icon {
+    width: 100px; /* Taille de l'image */
+    height: 100px;
+    object-fit: contain; /* Gère le contenu de l'image */
+    border-radius: 5px; /* Ajoute des coins arrondis */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.github_icon:hover {
+    transform: scale(1.1); /* Effet de zoom au survol */
 }
 
