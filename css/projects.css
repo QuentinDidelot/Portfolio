@@ -46,6 +46,7 @@
     padding: 25px;
     max-width: 700px;
     box-shadow: 0 6px 12px rgba(255, 255, 255, 0.7);
+    width: 45%;
 }
 
 .projects_pictures {
@@ -81,25 +82,25 @@
 .project_github {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre les éléments horizontalement */
-    gap: 10px; /* Ajoute un espace entre les éléments */
+    align-items: center; 
+    gap: 10px;
 }
 
 a {
-    display: inline-block; /* Le lien prend uniquement la taille de son contenu */
-    text-decoration: none; /* Supprime tout soulignement ou effet par défaut */
-    color: inherit; /* Garde la couleur du texte */
+    display: inline-block; 
+    text-decoration: none; 
+    color: inherit;
 }
 
 .github_icon {
-    width: 100px; /* Taille de l'image */
+    width: 100px; 
     height: 100px;
-    object-fit: contain; /* Gère le contenu de l'image */
-    border-radius: 5px; /* Ajoute des coins arrondis */
-    transition: transform 0.3s ease; /* Animation au survol */
+    object-fit: contain;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
 }
 
 .github_icon:hover {
-    transform: scale(1.1); /* Effet de zoom au survol */
+    transform: scale(1.1);
 }
 
