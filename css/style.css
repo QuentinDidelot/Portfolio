@@ -151,7 +151,7 @@ a {
     right: 0;
     z-index: 1000;
     width: 100%;
-    background: linear-gradient(#000, 85%, #00aaffcd);
+    background: linear-gradient(black, 80%, #00aaffcd);
     box-shadow: 1em 1em 10em .1em #00aaffcd;
     padding: 40px 0;
     display: flex;
