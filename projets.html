@@ -44,11 +44,18 @@
         </div>
 
         <div class="projects_pictures">
-            <img src="img/projets/projet_1.png" class="project_picture_main">
-            <img src="img/projets/projet_1.png" class="project_picture_second">
-            <img src="img/projets/projet_1.png" class="project_picture_second">
-            <img src="img/projets/projet_1.png" class="project_picture_second">
-            <img src="img/projets/projet_1.png" class="project_picture_second">
+            <img src="img/projets/projet_1.png" class="project_picture_main" onclick="openModal(this)">
+            <img src="img/projets/projet_1.png" class="project_picture_second" onclick="openModal(this)">
+            <img src="img/projets/projet_1.png" class="project_picture_second" onclick="openModal(this)">
+            <img src="img/projets/projet_1.png" class="project_picture_second" onclick="openModal(this)">
+            <img src="img/projets/projet_1.png" class="project_picture_second" onclick="openModal(this)">
+        </div>
+    
+        <div class="modal" id="imageModal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <div class="modal-content">
+                <img id="modalImage" src="">
+            </div>
         </div>
     </section>
 

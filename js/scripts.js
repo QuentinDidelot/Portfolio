@@ -78,3 +78,12 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(section); 
     });
 });
+
+function openModal(imgElement) {
+    document.getElementById('modalImage').src = imgElement.src;
+    document.getElementById('imageModal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('imageModal').style.display = 'none';
+}
