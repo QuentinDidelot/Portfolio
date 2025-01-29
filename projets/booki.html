@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quentin D. | Portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/projects.css">
+    <link rel="shortcut icon" type="image/png" href="/img/icones/favicon.ico"/>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="/index.html">← Retour à l'accueil</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="projects_title">
+        <p>Hello World</p>
+    </h1>
+
+    <h2 class="project_details">Description du projet : </h2> 
+    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum error temporibus, unde quod excepturi pariatur nihil culpa inventore quia dicta magnam minus porro architecto iusto vero laudantium nisi alias. Est?</p>
+
+    <section class="projects_content">
+        <div class="projects_features">
+            <h3>Fonctionnalités :</h3>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <h3>Technologies utilisées : </h3>
+
+        </div>
+
+        <div class="projects_pictures">
+            <img src="/img/projets/booki_1.jpg" class="project_picture_main" onclick="openModal(this)">
+            <img src="/img/projets/booki_2.jpg" class="project_picture_main" onclick="openModal(this)">
+        </div>
+    
+        <div class="modal" id="imageModal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <div class="modal-content">
+                <img id="modalImage" src="">
+            </div>
+        </div>
+    </section>
+
+    <section class="project_github">
+
+        <!-- Ne pas oublier d'ajouter le bon projet dans le lien -->
+        <a href="https://github.com/QuentinDidelot" target="_blank">
+            <img src="/img/icones/skills/icon-github.png" class="github_icon" alt="Logo de Github">
+        </a>
+        
+        <a href="https://github.com/QuentinDidelot" target="_blank">Voir le code source sur GitHub</a>
+    </section>
+
+    <footer>
+        <a href="mailto:quentin.d.dev@gmail.com" target="_blank">
+            <img src="/img/icones/mail.png" alt="Email" class="reseau-icon">
+        </a>
+        <a href="https://github.com/QuentinDidelot" target="_blank">
+            <img src="/img/icones/skills/icon-github.png" alt="GitHub" class="reseau-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/quentin-didelot-670248223/" target="_blank">
+            <img src="/img/icones/linkedin_footer.png" alt="LinkedIn" class="reseau-icon">
+        </a>
+        <p>&copy; 2024 Quentin Didelot. Tous droits réservés.</p>
+    </footer>
+
+
+    <button id="scrollTopBtn" title="Retour en haut"><img src="/img/icones/up.png" alt="flèche pour remonter en haut de la page"></button>
+
+    <script src="/js/scripts.js"></script>
+
+</body>
+</html>
