@@ -46,7 +46,7 @@ const projects = [
         title: "Portfolio d'Ina",
         link: "projets/portfolio_ina.html",
         image: "./img/projets_carrousel/projet_8.png",
-        skills: ["HTML", "CSS", "PHP", "Symfony", "Doctrine", "Twig"]
+        skills: ["HTML", "CSS", "PHP", "Symfony", "Doctrine", "Twig", "Tests"]
     },
     {
         title: "Projet à venir",
@@ -101,7 +101,10 @@ function renderFilteredProjects() {
         projectItem.appendChild(projectLink);
 
         const projectTitle = document.createElement('h3');
-        projectTitle.textContent = project.title;
+        const projectTitleLink = document.createElement('a');
+        projectTitleLink.href = project.link;
+        projectTitleLink.textContent = project.title;
+        projectTitle.appendChild(projectTitleLink);
         projectItem.appendChild(projectTitle);
 
         const skillsContainer = document.createElement('div');

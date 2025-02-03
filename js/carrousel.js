@@ -2,6 +2,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const projectList = document.getElementById('projectList');
 
+    // Ajouter les événements pour les boutons "prev" et "next"
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+
+    prevButton.addEventListener('click', () => {
+        if (currentPage > 0) {
+            currentPage--;
+            updateCarousel(projects); // Mettre à jour le carrousel avec la page précédente
+        }
+    });
+
+    nextButton.addEventListener('click', () => {
+        if (currentPage < totalPages - 1) {
+            currentPage++;
+            updateCarousel(projects); // Mettre à jour le carrousel avec la page suivante
+        }
+    });
+
 });
 
 let itemsPerPage;
