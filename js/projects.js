@@ -28,25 +28,25 @@ const projects = [
         title: "TaskLinker",
         link: "projets/tasklinker.html",
         image: "./img/projets_carrousel/projet_5.png",
-        skills: ["HTML", "CSS", "PHP", "Symfony", "Doctrine", "Twig"]
+        skills: ["HTML", "CSS", "PHP", "Symfony"]
     },
     {
         title: "EcoGarden",
         link: "projets/ecogarden.html",
         image: "./img/projets_carrousel/projet_6.png",
-        skills: ["HTML", "CSS", "PHP", "Symfony", "Doctrine", "Twig"]
+        skills: ["API REST", "PHP", "Symfony"]
     },
     {
         title: "Green Goodies",
         link: "projets/greengoodies.html",
         image: "./img/projets_carrousel/projet_7.png",
-        skills: ["HTML", "CSS", "PHP", "Symfony", "Doctrine", "Twig"]
+        skills: ["HTML", "CSS", "PHP", "Symfony", "API REST", "E-commerce", "Stripe"]
     },
     {
         title: "Portfolio d'Ina",
         link: "projets/portfolio_ina.html",
         image: "./img/projets_carrousel/projet_8.png",
-        skills: ["HTML", "CSS", "PHP", "Symfony", "Doctrine", "Twig", "Tests"]
+        skills: ["HTML", "CSS", "PHP", "Symfony", "Tests"]
     },
     {
         title: "Projet à venir",

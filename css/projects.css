@@ -33,6 +33,9 @@
                             Projects
 **************************************************************** */
 
+.project_details {
+    padding-left: 25px;
+}
 .projects_content {
     display: flex;
     justify-content: space-around;
@@ -47,6 +50,9 @@
     max-width: 700px;
     box-shadow: 0 6px 12px rgba(255, 255, 255, 0.7);
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
 }
 
 .projects_pictures {
@@ -113,6 +119,12 @@
     font-size: 5em;
     color: orange;
     cursor: pointer;
+}
+
+.chip {
+    font-size: larger;
+    color: orange;
+    padding-right: 10px;
 }
 
 /****************************************************************
