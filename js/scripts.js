@@ -87,3 +87,22 @@ function openModal(imgElement) {
 function closeModal() {
     document.getElementById('imageModal').style.display = 'none';
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const burgerMenu = document.querySelector(".burger-menu");
+    const secondNav = document.querySelector(".second-nav");
+
+    burgerMenu.addEventListener("click", function () {
+        burgerMenu.classList.toggle("active");
+        secondNav.classList.toggle("active");
+    });
+
+    // Fermer le menu lorsqu'on clique sur un lien
+    document.querySelectorAll(".second-nav a").forEach(link => {
+        link.addEventListener("click", () => {
+            burgerMenu.classList.remove("active");
+            secondNav.classList.remove("active");
+        });
+    });
+});
