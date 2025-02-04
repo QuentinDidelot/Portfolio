@@ -121,6 +121,17 @@
     cursor: pointer;
 }
 
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    min-width: 250px; /* pour s'assurer qu'il y a un minimum d'espace pour chaque colonne */
+}
+
 .chip {
     font-size: larger;
     color: orange;
