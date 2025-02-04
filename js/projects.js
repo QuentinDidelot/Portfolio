@@ -10,43 +10,43 @@ const projects = [
         title: "The ArtBox",
         link: "projets/the_artbox.html",
         image: "./img/projets_carrousel/projet_2.png",
-        skills: ["HTML", "CSS", "PHP", "SQL"]
+        skills: ["HTML", "CSS", "PHP", "MySQL"]
     },
     {
         title: "Blog d'Emilie Forteroche",
         link: "projets/blog_forteroche.html",
         image: "./img/projets_carrousel/projet_3.png",
-        skills: ["HTML", "CSS", "PHP", "SQL"]
+        skills: ["HTML", "CSS", "PHP", "MySQL"]
     },
     {
         title: "Tom Troc",
         link: "projets/tomtroc.html",
         image: "./img/projets_carrousel/projet_4.png",
-        skills: ["HTML", "CSS", "PHP", "Intégration", "SQL" ]
+        skills: ["HTML", "CSS", "PHP","MySQL", "Intégration" ]
     },
     {
         title: "TaskLinker",
         link: "projets/tasklinker.html",
         image: "./img/projets_carrousel/projet_5.png",
-        skills: ["HTML", "CSS", "PHP", "Symfony"]
+        skills: ["HTML", "CSS", "PHP", "MySQL", "Symfony"]
     },
     {
         title: "EcoGarden",
         link: "projets/ecogarden.html",
         image: "./img/projets_carrousel/projet_6.png",
-        skills: ["API REST", "PHP", "Symfony"]
+        skills: ["API REST", "PHP","MySQL", "Symfony"]
     },
     {
         title: "Green Goodies",
         link: "projets/greengoodies.html",
         image: "./img/projets_carrousel/projet_7.png",
-        skills: ["HTML", "CSS", "PHP", "Symfony", "API REST", "E-commerce", "Stripe"]
+        skills: ["HTML", "CSS", "Intégration", "PHP", "MySQL", "Symfony", "API REST", "E-commerce", "Stripe"]
     },
     {
         title: "Portfolio d'Ina",
         link: "projets/portfolio_ina.html",
         image: "./img/projets_carrousel/projet_8.png",
-        skills: ["HTML", "CSS", "PHP", "Symfony", "Tests"]
+        skills: ["HTML", "CSS", "PHP","MySQL", "Symfony", "Tests"]
     },
     {
         title: "Projet à venir",

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quentin D. | Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="shortcut icon" type="image/png" href="../img/icones/favicon.ico"/>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">← Retour à l'accueil</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="projects_title">
+        <p>Portfolio d'Ina</p>
+    </h1>
+
+    <div class="project_details">
+        <h2>Description du projet :</h2>
+        <p>Ina Zaoui, photographe spécialisée dans les paysages du monde entier, souhaite moderniser son site web afin d'améliorer son fonctionnement et ses performances. Ce site, qui lui permet d'exposer ses œuvres et de promouvoir de jeunes talents, doit être mis à jour pour garantir sa stabilité, sa sécurité et offrir une meilleure expérience utilisateur.</p>
+    </div>
+    
+    <section class="projects_content">
+        <div class="projects_features">
+
+            <h3>Fonctionnalités :</h3>
+
+            <p><span class="chip">◎</span> Migration du site vers une version plus récente de Symfony</p>  
+            <p><span class="chip">◎</span> Vérification des fichiers uploadés (type et taille)</p>  
+            <p><span class="chip">◎</span> Chargement dynamique des utilisateurs depuis une base de données</p>  
+            <p><span class="chip">◎</span> Gestion des invités (ajout, suppression, blocage, listing)</p>  
+            <p><span class="chip">◎</span> Optimisation des performances, notamment sur la page "Invités"</p>  
+            <p><span class="chip">◎</span> Implémentation de tests unitaires et fonctionnels avec un taux de couverture > 75%</p>  
+            <p><span class="chip">◎</span> Rédaction de la documentation technique et des bonnes pratiques de contribution</p>  
+            <p><span class="chip">◎</span> Mise en place d’une intégration continue pour automatiser les tests et les analyses</p>  
+            <p><span class="chip">◎</span> Production d’un rapport de performance avant et après optimisation</p>  
+            
+
+
+            <h3>Technologies utilisées : </h3>
+            <div class="technologies">
+                <div class="column">
+                    <p><span class="chip">◎</span>HTML5</p>
+                    <p><span class="chip">◎</span>CSS3</p>
+                    <p><span class="chip">◎</span>PHP 8.3</p>
+                    <p><span class="chip">◎</span>Symfony 5.4 >> 6.4</p>
+                    <p><span class="chip">◎</span>MySQL</p>
+                </div>
+                <div class="column">
+                    <p><span class="chip">◎</span>PHPUnit (tests unitaires et fonctionnels)</p>
+                    <p><span class="chip">◎</span>PHPStan (outils analytique)</p>
+                    <p><span class="chip">◎</span>Github Actions (intégration continue)</p>
+                    <p><span class="chip">◎</span>Profiler Symfony (analyse et optimisation des performances)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects_pictures">
+            <img src="../img/projets/portfolio_1.jpg" class="project_picture_main" onclick="openModal(this)">
+            <img src="../img/projets/portfolio_2.jpg" class="project_picture_second" onclick="openModal(this)">
+            <img src="../img/projets/portfolio_3.jpg" class="project_picture_second" onclick="openModal(this)">
+            <img src="../img/projets/portfolio_4.jpg" class="project_picture_second" onclick="openModal(this)">
+            <img src="../img/projets/portfolio_5.jpg" class="project_picture_second" onclick="openModal(this)">
+            <img src="../img/projets/portfolio_6.jpg" class="project_picture_second" onclick="openModal(this)">
+        </div>
+    
+        <div class="modal" id="imageModal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <div class="modal-content">
+                <img id="modalImage" src="">
+            </div>
+        </div>
+    </section>
+
+    <section class="project_github">
+
+        <a href="https://github.com/QuentinDidelot/InaZaoui" target="_blank">
+            <img src="../img/icones/skills/icon-github.png" class="github_icon" alt="Logo de Github">
+        </a>
+        
+        <a href="https://github.com/QuentinDidelot/InaZaoui" target="_blank">Voir le code source sur GitHub</a>
+    </section>
+
+    <footer>
+        <a href="mailto:quentin.d.dev@gmail.com" target="_blank">
+            <img src="../img/icones/mail.png" alt="Email" class="reseau-icon">
+        </a>
+        <a href="https://github.com/QuentinDidelot" target="_blank">
+            <img src="../img/icones/skills/icon-github.png" alt="GitHub" class="reseau-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/quentin-didelot-670248223/" target="_blank">
+            <img src="../img/icones/linkedin_footer.png" alt="LinkedIn" class="reseau-icon">
+        </a>
+        <p>&copy; 2024 Quentin Didelot. Tous droits réservés.</p>
+    </footer>
+
+
+    <button id="scrollTopBtn" title="Retour en haut"><img src="../img/icones/up.png" alt="flèche pour remonter en haut de la page"></button>
+
+    <script src="../js/scripts.js"></script>
+
+</body>
+</html>

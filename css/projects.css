@@ -129,7 +129,7 @@
 
 .column {
     flex: 1;
-    min-width: 250px; /* pour s'assurer qu'il y a un minimum d'espace pour chaque colonne */
+    min-width: 250px;
 }
 
 .chip {

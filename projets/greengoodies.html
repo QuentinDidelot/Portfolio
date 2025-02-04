@@ -18,29 +18,48 @@
         </nav>
     </header>
     <h1 class="projects_title">
-        <p>Hello World</p>
+        <p>GreenGoodies</p>
     </h1>
 
-    <h2 class="project_details">Description du projet : </h2> 
-    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum error temporibus, unde quod excepturi pariatur nihil culpa inventore quia dicta magnam minus porro architecto iusto vero laudantium nisi alias. Est?</p>
-
+    <div class="project_details">
+        <h2>Description du projet :</h2>
+        <p>Dans le but de toucher une audience plus large et d'élargir sa clientèle à l’échelle nationale, GreenGoodies souhaite développer un site e-commerce qui permet aux clients de découvrir et d'acheter des produits directement en ligne. En plus de cette partie front-end, un système d'API sera mis en place pour permettre aux partenaires d’afficher les produits de la boutique sur leurs propres sites.</p>
+    </div>
+    
     <section class="projects_content">
         <div class="projects_features">
-            <h3>Fonctionnalités :</h3>
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <h3>Technologies utilisées : </h3>
 
+            <h3>Fonctionnalités :</h3>
+
+            <p><span class="chip">◎</span> Affichage des produits avec photo, nom, prix et description courte sur la page d'accueil.</p>
+            <p><span class="chip">◎</span> Détail des produits avec possibilité d'ajouter au panier si l'utilisateur est connecté.</p>
+            <p><span class="chip">◎</span> Inscription avec vérification des données, redirection vers la page d'accueil une fois l'inscription réussie.</p>
+            <p><span class="chip">◎</span> Connexion avec message d'erreur si les identifiants sont incorrects.</p>
+            <p><span class="chip">◎</span> Page "Mon compte" avec la gestion des commandes passées, possibilité de supprimer le compte et d'activer/désactiver l'accès à l'API.</p>
+            <p><span class="chip">◎</span> Panier avec la liste des produits, leur quantité, et un bouton pour vider le panier et un pour valider la commande.</p>
+            <p><span class="chip">◎</span> Validation de la commande puis redirection sur la plateforme de Stripe pour payer en entrant ses coordonnées bancaires</p>
+            <p><span class="chip">◎</span> Validation du paiement avec succès puis redirection sur la page de confirmation de la commande.</p>
+            <p><span class="chip">◎</span> API permettant de récupérer la liste des produits uniquement pour les utilisateurs ayant activé leur accès API.</p>
+            <p><span class="chip">◎</span> Activation et désactivation de l'accès à l'API depuis la page "Mon compte".</p>
+            <p><span class="chip">◎</span> Optimisation des images et minification des fichiers CSS/JS pour un site plus respectueux de l'environnement.</p>
+
+
+            <h3>Technologies utilisées : </h3>
+            <div class="technologies">
+                <div class="column">
+                    <p><span class="chip">◎</span>HTML5</p>
+                    <p><span class="chip">◎</span>CSS3</p>
+                    <p><span class="chip">◎</span>PHP 8.3</p>
+                    <p><span class="chip">◎</span>Symfony 6.4</p>
+                    <p><span class="chip">◎</span>MySQL</p>
+                </div>
+                <div class="column">
+                    <p><span class="chip">◎</span>API REST</p>
+                    <p><span class="chip">◎</span>Token JWT</p>
+                    <p><span class="chip">◎</span>Nelmio</p>
+                    <p><span class="chip">◎</span>Plateforme de paiement : Stripe</p>
+                </div>
+            </div>
         </div>
 
         <div class="projects_pictures">
@@ -65,12 +84,11 @@
 
     <section class="project_github">
 
-        <!-- Ne pas oublier d'ajouter le bon projet dans le lien -->
-        <a href="https://github.com/QuentinDidelot" target="_blank">
+        <a href="https://github.com/QuentinDidelot/GreenGoodies" target="_blank">
             <img src="../img/icones/skills/icon-github.png" class="github_icon" alt="Logo de Github">
         </a>
         
-        <a href="https://github.com/QuentinDidelot" target="_blank">Voir le code source sur GitHub</a>
+        <a href="https://github.com/QuentinDidelot/GreenGoodies" target="_blank">Voir le code source sur GitHub</a>
     </section>
 
     <footer>
