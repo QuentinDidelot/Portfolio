@@ -89,6 +89,9 @@ function closeModal() {
 }
 
 
+/*
+* Menu burger
+*/
 document.addEventListener("DOMContentLoaded", function () {
     const burgerMenu = document.querySelector(".burger-menu");
     const secondNav = document.querySelector(".second-nav");

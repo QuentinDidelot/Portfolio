@@ -356,7 +356,7 @@ a {
 }
 
 .site-description {
-    font-size: 1em;
+    font-size: large;
     margin-bottom: 20px;
     color : var(--textColorOne);
     text-align: center;
@@ -381,10 +381,55 @@ a {
 .about-content p {
     font-size: 1.2em;
     line-height: 1.6;
-    max-width: 800px;
+    max-width:max-content;
     margin: 0 auto;
     color : var(--textColorOne);
+    margin-top: 10px;
 }
+
+.hobbies {
+    display: flex;
+    flex-wrap: wrap; /* Permet d’aller à la ligne si nécessaire */
+    justify-content: center;
+    gap: 20px;
+    padding-top: 25px;
+}
+
+.hobbies-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;  
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    flex-direction: column;
+    border: 5px solid #5ba8fa;
+}
+
+.hobbies-container p {
+    color: var(--backgroundColorTwo);
+}
+
+.hobbies-container img {
+    height: 75px;
+}
+
+.hobby-image {
+    perspective: 500px; /* Profondeur de l’effet 3D */
+}
+
+@keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+.hobby-image img {
+    animation: spin 3s linear infinite;
+}
+
 
 /****************************************************************
                         "Formations"
