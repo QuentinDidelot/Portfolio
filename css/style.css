@@ -27,7 +27,6 @@ body {
     padding: 0;
     color : var(--textColorOne); 
     background-color: var(--backgroundColorOne); 
-    max-width: 1440px;
 }
 
 html, body {
